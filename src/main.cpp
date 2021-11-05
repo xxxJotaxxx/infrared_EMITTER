@@ -1,6 +1,7 @@
 //libraries
 #include <Arduino.h>
 #include <IRremote.h>
+uint8_t sRepeats = 0;
 
 void setup()
 {
@@ -10,13 +11,11 @@ void setup()
 
 void loop()
 {
-    //send the code in HEX format
-    IrSender.sendNECMSB(0xF720DF, 32, false);
+    //send the code
+    IrSender.sendNECRaw(0xFB04EF00, sRepeats);
     delay(1000);
-    //send the code in HEX format
-    IrSender.sendNECMSB(0xF7A05F, 32, false);
+    IrSender.sendNECRaw(0xFA05EF00, sRepeats);
     delay(1000);
-    //send the code in HEX format
-    IrSender.sendNECMSB(0xF7609F, 32, false);
+    IrSender.sendNECRaw(0xF906EF00, sRepeats);
     delay(1000);
 }
