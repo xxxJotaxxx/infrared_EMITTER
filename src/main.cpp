@@ -11,12 +11,12 @@ void setup()
 void loop()
 {
     //send the code in HEX format
-    IrSender.sendNEC(0xF720DF, 32);
+    IrSender.sendNECMSB(0xF720DF, 32, false);
     delay(1000);
     //send the code in HEX format
-    IrSender.sendNEC(0xF7A05F, 32);
+    IrSender.sendNECMSB(0xF7A05F, 32, false);
     delay(1000);
     //send the code in HEX format
-    IrSender.sendNEC(0xF7609F, 32);
+    IrSender.sendNECMSB(0xF7609F, 32, false);
     delay(1000);
 }
