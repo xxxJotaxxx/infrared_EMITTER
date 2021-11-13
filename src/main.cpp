@@ -18,4 +18,6 @@ void loop()
     delay(1000);
     IrSender.sendNECRaw(0xF906EF00, sRepeats);
     delay(1000);
+    IrSender.sendNECRaw(0xE916EF00, sRepeats);
+    delay(1000);
 }
